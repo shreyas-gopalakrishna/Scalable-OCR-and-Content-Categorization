@@ -1,16 +1,10 @@
-## CSCI 5253 - Data Center Scale Computing - Project
+## Scalable Service for Character Recognition and Content Categorization
 
-Scalable Service for Character Recognition and Content Categorization
-
-
-### Team Members
-Joon il Kwon
-
-Shreyas Gopalakrishna
+CSCI 5253 - Data Center Scale Computing - Project
 
 #### Project URL
-https://github.com/cu-csci-4253-datacenter-fall-2019/final-project-repository-shreyas-g-ucb
-
+https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization
+https://www.youtube.com/watch?v=cWYq_U782eU&t
 
 #### Project Goals
 Character recognition - A web service takes images of documents or notes, performs OCR (Optical character recognition) on them and stores the input image and the converted text.
@@ -38,6 +32,9 @@ CloudSQL
 
 RabbitMQ
 
+### Architecture diagram
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/Architecture.png)
+
 ### Steps to Run code
 1. `gcloud container clusters create mykube` creates a kubernetes cluster.
 2. `sh redis-launch.sh` creates docker image of redis, pushes it to kubernetes, and exposes port.
@@ -53,6 +50,23 @@ DCSC.json is the GOOGLE_APPLICATION_CREDENTIALS file. It is not included in the 
 
 A custom service credentials json from must be generated and used to run the project.
 
+### Snapshots from Project
+
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/1.png)<br/>
+*Scalable pods in Google cloud* <br/>
+<br/>
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/2.png)<br/>
+*Text recognition in uploaded image* <br/>
+<br/>
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/3.png)<br/>
+*Content categorization of text found in the image* <br/>
+<br/>
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/4.png)<br/>
+*All uploaded documents* <br/>
+<br/>
+![](https://github.com/shreyas-gopalakrishna/Scalable-OCR-and-Content-Categorization/blob/master/images/5.png)<br/>
+*Search query across all uploaded images* <br/>
+<br/>
 
 ##### UI Template Credits
 https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18
@@ -67,11 +81,3 @@ https://cloud.google.com/vision/docs/auth
 https://medium.com/@jdegange85/document-image-datasets-b7f8df01010d
 
 https://cloud.google.com/natural-language/docs/classify-text-tutorial
-
-Code snippets from previous lab assignments
-
-
-*-Shreyas Gopalakrishna*
-
-*-Joon il Kwon*
-
